@@ -5,7 +5,7 @@ alumna: Luciana Nadine Rojas
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HELLO WORLD</title>
+    <title>HELLO WORLD - News Magazine</title>
     <style>
         * {
             margin: 0;
@@ -14,167 +14,138 @@ alumna: Luciana Nadine Rojas
         }
 
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
+            font-family: 'Times New Roman', serif;
+            background-color: #f5f5f5;
             color: #333;
-            background-color: #fff;
+        }
+
+        .header {
+            background: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+
+        .logo-section {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo-section h1 {
+            font-size: 48px;
+            letter-spacing: 8px;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .main-nav {
+            background: white;
+            border-top: 2px solid #333;
+            border-bottom: 2px solid #333;
+            padding: 15px 0;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
+        .nav-list li {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: #333;
+            cursor: pointer;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .top-bar {
-            background-color: #f8f8f8;
-            padding: 10px 0;
-            font-size: 12px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .top-bar-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .top-bar-left span {
-            margin-right: 15px;
-        }
-
-        .top-bar-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 10px;
-            margin-right: 15px;
-        }
-
-        .search-box {
-            padding: 5px 10px;
-            border: 1px solid #ccc;
-            font-size: 11px;
-        }
-
-        /* Logo and Navigation */
-        .header {
-            text-align: center;
-            padding: 30px 0;
-        }
-
-        .logo {
-            font-size: 36px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
-        }
-
-        .tagline {
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .navigation {
-            border-top: 2px solid #000;
-            border-bottom: 2px solid #000;
-            padding: 15px 0;
-        }
-
-        .nav-menu {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            gap: 40px;
-        }
-
-        .nav-menu li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Main Content Layout */
-        .main-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 30px;
-            padding: 30px 0;
+            padding: 30px 20px;
         }
 
-        /* News Grid */
-        .news-grid {
+        .main-content {
+            background: white;
+        }
+
+        .featured-articles {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
             margin-bottom: 30px;
         }
 
-        .news-card {
-            display: flex;
-            gap: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #e0e0e0;
+        .article-card {
+            text-align: center;
         }
 
-        .news-image {
-            width: 80px;
-            height: 60px;
-            background-color: #f0f0f0;
-            flex-shrink: 0;
-            background-size: cover;
-            background-position: center;
+        .article-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 10px;
         }
 
-        .news-content h3 {
+        .article-card h3 {
             font-size: 14px;
             margin-bottom: 5px;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
-        .news-meta {
+        .article-meta {
             font-size: 11px;
-            color: #999;
+            color: #666;
         }
 
-        /* Featured Article */
-        .featured-article {
+        .main-article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
             margin-bottom: 40px;
         }
 
-        .featured-image {
+        .main-article-image {
             width: 100%;
-            height: 300px;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 20px;
-            position: relative;
+            height: 400px;
+            object-fit: cover;
         }
 
-        .featured-title {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            line-height: 1.3;
+        .main-article-content h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: normal;
         }
 
         .author-info {
             display: flex;
             align-items: center;
+            gap: 10px;
             margin-bottom: 15px;
         }
 
@@ -182,165 +153,149 @@ alumna: Luciana Nadine Rojas
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80');
-            background-size: cover;
-            background-position: center;
-            margin-right: 10px;
+            object-fit: cover;
         }
 
-        .author-name {
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .article-excerpt {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Recent Posts */
         .recent-posts {
             margin-top: 40px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 24px;
             margin-bottom: 30px;
-            text-transform: uppercase;
+            font-weight: normal;
             letter-spacing: 2px;
         }
 
-        .recent-posts-list {
+        .post-list {
             display: grid;
             gap: 20px;
         }
 
-        .recent-post {
-            display: flex;
+        .post-item {
+            display: grid;
+            grid-template-columns: 150px 1fr;
             gap: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
         }
 
-        .recent-post-image {
-            width: 100px;
-            height: 70px;
-            background-color: #f0f0f0;
-            flex-shrink: 0;
-            background-size: cover;
-            background-position: center;
+        .post-item img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
         }
 
-        .recent-post-content h4 {
+        .post-content h4 {
             font-size: 16px;
-            margin-bottom: 8px;
-            line-height: 1.4;
+            margin-bottom: 10px;
+            line-height: 1.3;
         }
 
-        .recent-post-meta {
-            font-size: 11px;
-            color: #999;
-            display: flex;
-            gap: 15px;
-        }
-
-        /* Sidebar */
         .sidebar {
-            padding-left: 20px;
-        }
-
-        .sidebar-section {
-            margin-bottom: 40px;
-        }
-
-        .sidebar-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            background: white;
+            padding: 20px;
+            height: fit-content;
         }
 
         .popular-articles {
-            list-style: none;
+            margin-bottom: 30px;
         }
 
-        .popular-articles li {
+        .popular-item {
             display: flex;
             gap: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .popular-item img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        .popular-content {
+            flex: 1;
+        }
+
+        .popular-content h5 {
             font-size: 14px;
+            line-height: 1.3;
+            margin-bottom: 5px;
         }
 
-        .popular-articles .number {
-            font-weight: bold;
-            color: #666;
+        .search-box {
+            margin-bottom: 30px;
         }
 
-        .search-section input {
+        .search-box input {
             width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             margin-bottom: 10px;
         }
 
-        .search-btn {
+        .search-box button {
             width: 100%;
             padding: 10px;
-            background-color: #333;
+            background: #333;
             color: white;
             border: none;
             cursor: pointer;
-            text-transform: uppercase;
         }
 
-        .trending-image {
+        .trending-section {
+            margin-bottom: 30px;
+        }
+
+        .trending-item {
+            margin-bottom: 15px;
+        }
+
+        .trending-item img {
             width: 100%;
             height: 150px;
-            background-color: #f0f0f0;
+            object-fit: cover;
             margin-bottom: 10px;
-            background-size: cover;
-            background-position: center;
         }
 
-        .trending-title {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 5px;
+        .tags-section {
+            margin-bottom: 30px;
         }
 
-        .trending-excerpt {
+        .tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 5px 10px;
+            margin: 5px;
             font-size: 12px;
-            color: #666;
-            margin-bottom: 5px;
+            text-decoration: none;
+            color: #333;
         }
 
-        .trending-meta {
-            font-size: 11px;
-            color: #999;
-        }
-
-        /* Footer Navigation */
-        .footer-nav {
-            background-color: #f8f8f8;
-            padding: 30px 0;
-            margin-top: 50px;
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
         }
 
         .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
+            padding: 0 20px;
         }
 
-        .footer-section h4 {
-            font-size: 14px;
-            font-weight: bold;
+        .footer-section h3 {
+            font-size: 16px;
             margin-bottom: 15px;
-            text-transform: uppercase;
         }
 
         .footer-section ul {
@@ -352,324 +307,296 @@ alumna: Luciana Nadine Rojas
         }
 
         .footer-section ul li a {
+            color: #ccc;
             text-decoration: none;
-            color: #666;
-            font-size: 12px;
+            font-size: 14px;
         }
 
-        .footer-post {
-            display: flex;
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
-            margin-bottom: 15px;
         }
 
-        .footer-post-image {
-            width: 50px;
-            height: 35px;
-            background-color: #ddd;
-            flex-shrink: 0;
-            background-size: cover;
-            background-position: center;
+        .social-grid img {
+            width: 100%;
+            height: 60px;
+            object-fit: cover;
         }
 
-        .footer-post-content {
-            font-size: 11px;
-        }
-
-        .footer-post-title {
-            font-weight: bold;
-            margin-bottom: 3px;
-        }
-
-        /* Bottom Footer */
-        .bottom-footer {
-            text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .bottom-footer .logo {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .copyright {
-            font-size: 11px;
-            color: #999;
-        }
-
-        /* Pagination */
         .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+            text-align: center;
             margin: 30px 0;
         }
 
         .pagination a {
-            padding: 8px 12px;
+            display: inline-block;
+            padding: 8px 15px;
+            margin: 0 5px;
             text-decoration: none;
             color: #333;
             border: 1px solid #ddd;
         }
 
         .pagination a.active {
-            background-color: #333;
+            background: #333;
             color: white;
         }
 
-        /* Tag Cloud */
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
+        .category-badge {
+            background: #333;
+            color: white;
+            padding: 2px 8px;
+            font-size: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
 
-        .tag {
-            background-color: #f0f0f0;
-            padding: 5px 10px;
-            font-size: 11px;
-            text-decoration: none;
-            color: #666;
+        .featured-large {
+            position: relative;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-left">
-                <span>☰ MORE</span>
-                <span>📅 Friday 5 January 2023</span>
-            </div>
-            <div class="top-bar-right">
-                <div class="social-icons">
-                    <span>📧</span>
-                    <span>💬</span>
-                    <span>📱</span>
-                </div>
-                <input type="text" placeholder="SEARCH" class="search-box">
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
     <header class="header">
-        <div class="container">
-            <h1 class="logo">HELLO WORLD</h1>
-            <div class="tagline">≈ NEWSPAPER / MAGAZINE / PUBLISHER ≈</div>
-            
-            <!-- Navigation -->
-            <nav class="navigation">
-                <ul class="nav-menu">
-                    <li><a href="#">→ HOME</a></li>
-                    <li><a href="#">→ LAYOUT</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">ECONOMY</a></li>
-                    <li><a href="#">→ ENTERTAINMENT</a></li>
-                    <li><a href="#">JOBS</a></li>
-                </ul>
-            </nav>
+        <div class="top-bar">
+            <span>≡ MORE</span>
+            <span>⊙ Friday 5 January 2024</span>
+            <span>⊙ ⊗ ⊕ 🔍 SEARCH</span>
         </div>
+        
+        <div class="logo-section">
+            <h1>HELLO WORLD</h1>
+            <p class="tagline">∼ NEWSPAPER | MAGAZINE | PUBLISHER ∼</p>
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="#" onclick="showHome()">• HOME</a></li>
+                <li><a href="#" onclick="showLayout()">• LAYOUT</a></li>
+                <li><a href="#" onclick="showNews()">NEWS</a></li>
+                <li><a href="#" onclick="showEconomy()">ECONOMY</a></li>
+                <li><a href="#" onclick="showEntertainment()">• ENTERTAINMENT</a></li>
+                <li><a href="#" onclick="showJobs()">JOBS</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="main-content">
-            <!-- Left Column -->
-            <main>
-                <!-- Top News Grid -->
-                <div class="news-grid">
-                    <article class="news-card">
-                        <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68e2c6b387?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                        <div class="news-content">
-                            <h3>Lorem ipsum dui sollic studin</h3>
-                            <div class="news-meta">8 JAN 2023 · NO VIEWS</div>
+    <div id="content">
+        <!-- HOME PAGE -->
+        <div id="home-page">
+            <div class="container">
+                <main class="main-content">
+                    <section class="featured-articles">
+                        <article class="article-card">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&h=200&fit=crop" alt="Ciudad moderna">
+                            <h3>Lorem ipsum del edificio moderno</h3>
+                            <p class="article-meta">1 FEB 2024 • NO NEWS</p>
+                        </article>
+                        <article class="article-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop" alt="Retrato">
+                            <h3>Ut enim ad minima veniam quis</h3>
+                            <p class="article-meta">28 JAN 2024 • FASHION</p>
+                        </article>
+                        <article class="article-card">
+                            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=300&h=200&fit=crop" alt="Negocios">
+                            <h3>Quis autem vel eum iure reprehenderit</h3>
+                            <p class="article-meta">5 JAN 2024 • BUSINESS</p>
+                        </article>
+                        <article class="article-card">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616c64c29b8?w=300&h=200&fit=crop" alt="Persona">
+                            <h3>At vero eos et accusamus et iusto</h3>
+                            <p class="article-meta">15 FEB 2024 • LIFESTYLE</p>
+                        </article>
+                    </section>
+
+                    <section class="main-article">
+                        <div class="featured-large">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=400&fit=crop" alt="Hombre barba blanca" class="main-article-image">
+                            <span class="category-badge">Fashion, Man</span>
                         </div>
-                    </article>
-                    
-                    <article class="news-card">
-                        <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                        <div class="news-content">
-                            <h3>Ut enim ad minim veniat</h3>
-                            <div class="news-meta">8 JAN 2023 · NO VIEWS</div>
+                        <div class="main-article-content">
+                            <h2>Lorem ipsum dui sollic itudin praesent ut mollis primis eros torquent fames</h2>
+                            <div class="author-info">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop" alt="Steven Job" class="author-avatar">
+                                <div>
+                                    <strong>Steven Job</strong>
+                                    <p style="font-size: 12px; color: #666;">3 FEB 2024</p>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</p>
                         </div>
-                    </article>
-                    
-                    <article class="news-card">
-                        <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                        <div class="news-content">
-                            <h3>Quis nostrum vel enim lorem laboret</h3>
-                            <div class="news-meta">8 JAN 2023 · NO VIEWS</div>
+                    </section>
+
+                    <section class="recent-posts">
+                        <h2 class="section-title">∼∼∼ RECENT POSTS ∼∼∼</h2>
+                        <div class="post-list">
+                            <article class="post-item">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=150&fit=crop" alt="Edificios">
+                                <div class="post-content">
+                                    <h4>Magna aliqua ut enim ad minim veniam</h4>
+                                    <div class="author-info">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop" alt="Writer" class="author-avatar">
+                                        <small>Writer Six • POLITICS EDITOR • 18 JAN 2024</small>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="post-item">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616c64c29b8?w=200&h=150&fit=crop" alt="Mujer">
+                                <div class="post-content">
+                                    <h4>Leitraeset sheeds containing Lorem Ipsum passages, and more recently</h4>
+                                    <div class="author-info">
+                                        <img src="https://images.unsplash.com/photo-1494790108755-2616c64c29b8?w=30&h=30&fit=crop" alt="Writer" class="author-avatar">
+                                        <small>Writer Six • POLITICS EDITOR • 18 JAN 2024</small>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="post-item">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=200&h=150&fit=crop" alt="Oficina">
+                                <div class="post-content">
+                                    <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</h4>
+                                    <div class="author-info">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop" alt="Writer" class="author-avatar">
+                                        <small>Writer Six • POLITICS EDITOR • 18 JAN 2024</small>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="post-item">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=150&fit=crop" alt="Montañas">
+                                <div class="post-content">
+                                    <h4>It uses a dictionary of over 200 Latin words, combined</h4>
+                                    <div class="author-info">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop" alt="Writer" class="author-avatar">
+                                        <small>Writer Six • POLITICS EDITOR • 18 JAN 2024</small>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="post-item">
+                                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=200&h=150&fit=crop" alt="Oficina">
+                                <div class="post-content">
+                                    <h4>Reading is not only informed by what's going on with us at that moment</h4>
+                                    <div class="author-info">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop" alt="Writer" class="author-avatar">
+                                        <small>Writer Six • POLITICS EDITOR • 18 JAN 2024</small>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="post-item">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=150&fit=crop" alt="Hombre pensativo">
+                                <div class="post-content">
+                                    <h4>What you see and what you're experiencing as you read these</h4>
+                                    <div class="author-info">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=30&h=30&fit=crop" alt="Writer" class="author-avatar">
+                                        <small>Writer Six • POLITICS EDITOR • 18 JAN 2024</small>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                    </article>
-                    
-                    <article class="news-card">
-                        <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                        <div class="news-content">
-                            <h3>At vero eos et oboro dignos et harum</h3>
-                            <div class="news-meta">8 JAN 2023 · NO VIEWS</div>
+
+                        <div class="pagination">
+                            <a href="#">PREV</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">NEXT</a>
                         </div>
-                    </article>
-                </div>
+                    </section>
+                </main>
 
-                <!-- Featured Article -->
-                <article class="featured-article">
-                    <div class="featured-image"></div>
-                    <h2 class="featured-title">Lorem ipsum dui sollic itudin praesent ut mollis primis eros torquent fames</h2>
-                    <div class="author-info">
-                        <div class="author-avatar"></div>
-                        <div class="author-name">Steven Job<br><small>8 JAN 2023</small></div>
-                    </div>
-                    <p class="article-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </article>
-
-                <!-- Recent Posts -->
-                <section class="recent-posts">
-                    <h2 class="section-title">≈≈≈ RECENT POSTS ≈≈≈</h2>
-                    <div class="recent-posts-list">
-                        <article class="recent-post">
-                            <div class="recent-post-image" style="background-image: url('https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                            <div class="recent-post-content">
-                                <h4>Magna aliqua ut enim ad minim veniam</h4>
-                                <div class="recent-post-meta">
-                                    <span>👤 Steven Job</span>
-                                    <span>📅 POLITICS, STORY</span>
-                                    <span>📅 18 JAN 2023</span>
-                                </div>
+                <aside class="sidebar">
+                    <section class="popular-articles">
+                        <h3>• POPULAR ARTICLES</h3>
+                        <div class="popular-item">
+                            <span style="font-size: 24px; font-weight: bold; color: #ccc;">1.</span>
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&h=80&fit=crop" alt="Ciudad">
+                            <div class="popular-content">
+                                <h5>Ut enim ad minima veniam, quis nostrum</h5>
+                                <small style="color: #666;">5 FEB 2024 • NO NEWS</small>
                             </div>
-                        </article>
+                        </div>
 
-                        <article class="recent-post">
-                            <div class="recent-post-image" style="background-image: url('https://images.unsplash.com/photo-1585282263861-f55e341878f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                            <div class="recent-post-content">
-                                <h4>Laborant shects containing Lorem Ipsum passages, and more recently</h4>
-                                <div class="recent-post-meta">
-                                    <span>👤 Steven Job</span>
-                                    <span>📅 POLITICS, STORY</span>
-                                    <span>📅 18 JAN 2023</span>
-                                </div>
+                        <div class="popular-item">
+                            <span style="font-size: 24px; font-weight: bold; color: #ccc;">2.</span>
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=100&h=80&fit=crop" alt="Oficina">
+                            <div class="popular-content">
+                                <h5>Cum soluta nobis conseque turis</h5>
+                                <small style="color: #666;">5 FEB 2024 • BUSINESS</small>
                             </div>
-                        </article>
+                        </div>
 
-                        <article class="recent-post">
-                            <div class="recent-post-image" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                            <div class="recent-post-content">
-                                <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered</h4>
-                                <div class="recent-post-meta">
-                                    <span>👤 Steven Job</span>
-                                    <span>📅 POLITICS, STORY</span>
-                                    <span>📅 18 JAN 2023</span>
-                                </div>
+                        <div class="popular-item">
+                            <span style="font-size: 24px; font-weight: bold; color: #ccc;">3.</span>
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616c64c29b8?w=100&h=80&fit=crop" alt="Mujer">
+                            <div class="popular-content">
+                                <h5>Faliquet lorem mollius dae augue</h5>
+                                <small style="color: #666;">5 FEB 2024 • LIFESTYLE</small>
                             </div>
-                        </article>
+                        </div>
 
-                        <article class="recent-post">
-                            <div class="recent-post-image" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                            <div class="recent-post-content">
-                                <h4>It uses a dictionary of over 200 Latin words, combined</h4>
-                                <div class="recent-post-meta">
-                                    <span>👤 Steven Job</span>
-                                    <span>📅 POLITICS, STORY</span>
-                                    <span>📅 18 JAN 2023</span>
-                                </div>
+                        <div class="popular-item">
+                            <span style="font-size: 24px; font-weight: bold; color: #ccc;">4.</span>
+                            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=100&h=80&fit=crop" alt="Negocios">
+                            <div class="popular-content">
+                                <h5>Quam mauris lorem eget all euismod</h5>
+                                <small style="color: #666;">5 FEB 2024 • BUSINESS</small>
                             </div>
-                        </article>
+                        </div>
 
-                        <article class="recent-post">
-                            <div class="recent-post-image" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                            <div class="recent-post-content">
-                                <h4>Reading is not only informed by what's going on with us at that moment</h4>
-                                <div class="recent-post-meta">
-                                    <span>👤 Steven Job</span>
-                                    <span>📅 POLITICS, STORY</span>
-                                    <span>📅 18 JAN 2023</span>
-                                </div>
+                        <div class="popular-item">
+                            <span style="font-size: 24px; font-weight: bold; color: #ccc;">5.</span>
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=80&fit=crop" alt="Paisaje">
+                            <div class="popular-content">
+                                <h5>Nec elit lorem phus sensus gravida</h5>
+                                <small style="color: #666;">5 FEB 2024 • TRAVEL</small>
                             </div>
-                        </article>
+                        </div>
+                    </section>
 
-                        <article class="recent-post">
-                            <div class="recent-post-image" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');"></div>
-                            <div class="recent-post-content">
-                                <h4>What you see and what you're experiencing as you read these</h4>
-                                <div class="recent-post-meta">
-                                    <span>👤 Steven Job</span>
-                                    <span>📅 POLITICS, STORY</span>
-                                    <span>📅 18 JAN 2023</span>
-                                </div>
+                    <section class="search-box">
+                        <h3>• SEARCH</h3>
+                        <input type="text" placeholder="Buscar...">
+                        <button>SEARCH</button>
+                    </section>
+
+                    <section class="trending-section">
+                        <h3>• TRENDING</h3>
+                        <div class="trending-item">
+                            <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=300&h=200&fit=crop" alt="Concierto">
+                            <div style="position: relative;">
+                                <span style="position: absolute; top: -30px; right: 10px; background: #333; color: white; padding: 5px; font-size: 12px;">Best Blog</span>
+                                <h5>Nos agnas is lorem agissum etui lues et purpors ar desiror et dilius</h5>
                             </div>
-                        </article>
-                    </div>
-                </section>
+                        </div>
 
-                <!-- Pagination -->
-                <div class="pagination">
-                    <a href="#">‹‹‹</a>
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">NEXT ›</a>
-                </div>
-            </main>
+                        <div class="trending-item">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616c64c29b8?w=300&h=200&fit=crop" alt="Mujer elegante">
+                            <h5>Magna aliqua ut enim ad minim veniam</h5>
+                            <small>10 JAN 2024</small>
+                        </div>
 
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <!-- Popular Articles -->
-                <section class="sidebar-section">
-                    <h3 class="sidebar-title">● POPULAR ARTICLES</h3>
-                    <ol class="popular-articles">
-                        <li><span class="number">1.</span> Ut enim ad minim veniam, quis nostrum</li>
-                        <li><span class="number">2.</span> Cum sociis natique penibus tempi cursus</li>
-                        <li><span class="number">3.</span> Nullam lorem risitas tetur augue</li>
-                        <li><span class="number">4.</span> Quam mauris lorem orci sit rutmonis</li>
-                        <li><span class="number">5.</span> Nec elit libor platea societas gravida</li>
-                    </ol>
-                </section>
+                        <div class="trending-item">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300&h=200&fit=crop" alt="Reunión">
+                            <h5>Magna aliqua ut enim ad minim veniam</h5>
+                            <small>10 JAN 2024</small>
+                        </div>
 
-                <!-- Search -->
-                <section class="sidebar-section">
-                    <h3 class="sidebar-title">● SEARCH</h3>
-                    <div class="search-section">
-                        <input type="text" placeholder="Search...">
-                        <button class="search-btn">SEARCH</button>
-                    </div>
-                </section>
+                        <div class="trending-item">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616c64c29b8?w=300&h=200&fit=crop" alt="Retrato">
+                            <h5>Magna aliqua ut enim ad minim veniam</h5>
+                            <small>10 JAN 2024</small>
+                        </div>
+                    </section>
 
-                <!-- Trending -->
-                <section class="sidebar-section">
-                    <h3 class="sidebar-title">● TRENDING</h3>
-                    <article>
-                        <div class="trending-image" style="background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
-                        <h4 class="trending-title">Best Blog</h4>
-                        <p class="trending-excerpt">Nos gente di thierry superior who loves or pursues or desires to obtain</p>
-                        <div class="trending-meta">18 JAN 2023</div>
-                    </article>
-                </section>
-
-                <!-- More Articles -->
-                <section class="sidebar-section">
-                    <div style="margin-bottom: 15px;">
-                        <div class="trending-image" style="height: 80px; background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
-                        <div class="trending-title" style="font-size: 12px;">Magna aliqua ut enim ad minim veniam</div>
-                        <div class="trending-meta">18 JAN 2023</div>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <div class="trending-image" style="height: 80px; background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
-                        <div class="trending-title" style="font-size: 12px;">Magna aliqua ut enim ad minim veniam</div>
-                        <div class="trending-meta">18 JAN 2023</div>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <div class="trending-image" style="height: 80px; background-image: url('https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
-                        <div class="trending-title" style="font-size: 12px;">Magna aliqua ut enim ad minim veniam</div>
-                        <div class="trending-meta">18 JAN 2023</div>
-                    </div>
-                </section>
-
-                <!-- Tags -->
-                <section class="sidebar-section">
-                    <h3 class="sidebar-title">● TAGS CLOUD</h3>
-                    <div class="tag-cloud">
+                    <section class="tags-section">
+                        <h3>• TAGS CLOUD</h3>
                         <a href="#" class="tag">Business</a>
                         <a href="#" class="tag">Technology</a>
                         <a href="#" class="tag">Sport</a>
@@ -682,73 +609,101 @@ alumna: Luciana Nadine Rojas
                         <a href="#" class="tag">Education</a>
                         <a href="#" class="tag">Social</a>
                         <a href="#" class="tag">Three</a>
-                    </div>
-                </section>
-            </aside>
+                    </section>
+                </aside>
+            </div>
         </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="footer-nav">
-        <div class="container">
-            <div class="footer-content">
-                <!-- Most Comments -->
-                <div class="footer-section">
-                    <h4>● MOST COMMENTS</h4>
-                    <ol>
-                        <li><a href="#">Efficitur adipiscing mollis orci semper class</a></li>
-                        <li><a href="#">Anceritisol pul cuncibus risus ut amet rutilot</a></li>
-                        <li><a href="#">Quam placerat et culpa sollicitis molore libero</a></li>
-                        <li><a href="#">Amet for hoc proch hello and beautiful pharetra cursus</a></li>
-                    </ol>
-                </div>
-
-                <!-- Latest -->
-                <div class="footer-section">
-                    <h4>● LATEST</h4>
-                    <div class="footer-post">
-                        <div class="footer-post-image" style="background-image: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80');"></div>
-                        <div class="footer-post-content">
-                            <div class="footer-post-title">Magna aliqua ut enim ad minim veniam</div>
-                            <div class="footer-post-meta">18 JAN 2023</div>
+        <!-- NEWS PAGE -->
+        <div id="news-page" style="display: none;">
+            <div class="container">
+                <main class="main-content">
+                    <h1 style="text-align: center; margin: 40px 0; font-size: 36px;">NOTICIAS</h1>
+                    <div class="post-list">
+                        <article class="post-item">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=200&h=150&fit=crop" alt="Noticias">
+                            <div class="post-content">
+                                <h4>Últimas noticias del mundo empresarial</h4>
+                                <p>Las empresas tecnológicas siguen liderando el mercado...</p>
+                                <small>2 FEB 2024 • BUSINESS</small>
+                            </div>
+                        </article>
+                        
+                        <article class="post-item">
+                            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=200&h=150&fit=crop" alt="Política">
+                            <div class="post-content">
+                                <h4>Nuevos desarrollos en política internacional</h4>
+                                <p>Los líderes mundiales se reúnen para discutir temas globales...</p>
+                                <small>1 FEB 2024 • POLITICS</small>
+                            </div>
+                        </article>
+                        
+                        <article class="post-item">
+                            <img src="https://images.unsplash.com/photo-1581092786450-7ef25586ac07?w=200&h=150&fit=crop" alt="Ciencia">
+                            <div class="post-content">
+                                <h4>Avances científicos revolucionarios</h4>
+                                <p>Nuevos descubrimientos prometen cambiar nuestra comprensión...</p>
+                                <small>31 JAN 2024 • SCIENCE</small>
+                            </div>
+                        </article>
+                    </div>
+                </main>
+                <aside class="sidebar">
+                    <h3>Noticias Destacadas</h3>
+                    <div class="popular-item">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=100&h=80&fit=crop" alt="Destacada">
+                        <div class="popular-content">
+                            <h5>Noticia más leída del día</h5>
+                            <small>HOY • TRENDING</small>
                         </div>
                     </div>
-                    <div class="footer-post">
-                        <div class="footer-post-image" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80');"></div>
-                        <div class="footer-post-content">
-                            <div class="footer-post-title">Magna aliqua ut enim ad minim veniam</div>
-                            <div class="footer-post-meta">18 JAN 2023</div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- ECONOMY PAGE -->
+        <div id="economy-page" style="display: none;">
+            <div class="container">
+                <main class="main-content">
+                    <h1 style="text-align: center; margin: 40px 0; font-size: 36px;">ECONOMÍA</h1>
+                    <div class="post-list">
+                        <article class="post-item">
+                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=200&h=150&fit=crop" alt="Finanzas">
+                            <div class="post-content">
+                                <h4>Análisis del mercado financiero actual</h4>
+                                <p>Los mercados muestran tendencias positivas este trimestre...</p>
+                                <small>3 FEB 2024 • FINANCE</small>
+                            </div>
+                        </article>
+                        
+                        <article class="post-item">
+                            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=200&h=150&fit=crop" alt="Criptomonedas">
+                            <div class="post-content">
+                                <h4>El futuro de las criptomonedas</h4>
+                                <p>Bitcoin y otras monedas digitales siguen ganando adopción...</p>
+                                <small>2 FEB 2024 • CRYPTO</small>
+                            </div>
+                        </article>
+                    </div>
+                </main>
+                <aside class="sidebar">
+                    <h3>Datos Económicos</h3>
+                    <div class="popular-item">
+                        <div class="popular-content">
+                            <h5>Inflación: 3.2%</h5>
+                            <h5>Desempleo: 4.1%</h5>
+                            <h5>PIB: +2.8%</h5>
                         </div>
                     </div>
-                    <div class="footer-post">
-                        <div class="footer-post-image" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80');"></div>
-                        <div class="footer-post-content">
-                            <div class="footer-post-title">Magna aliqua ut enim ad minim veniam</div>
-                            <div class="footer-post-meta">18 JAN 2023</div>
-                        </div>
-                    </div>
-                </div>
+                </aside>
+            </div>
+        </div>
 
-                <!-- Categories -->
-                <div class="footer-section">
-                    <h4>● CATEGORIES</h4>
-                    <ul>
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Environment</a></li>
-                        <li><a href="#">Life style</a></li>
-                        <li><a href="#">Technology</a></li>
-                    </ul>
-                    <ul style="margin-top: 20px;">
-                        <li><a href="#">Entertainment</a></li>
-                        <li><a href="#">Health</a></li>
-                        <li><a href="#">Politics</a></li>
-                        <li><a href="#">World</a></li>
-                    </ul>
-                </div>
-
-                <!-- Instagram -->
-                <div class="footer-section">
-                    <h4>● INSTAGRAM</h4>
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px;">
-                        <div style="width: 50px; height: 50px; background: url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'); background-size: cover; background-position: center;"></div>
-                        <div style="width: 50px; height: 50px; background: url('https://images.unsplash.com/photo-1557318041-1ce374d55ebf?ixlib=rb-4.0.3&auto
+        <!-- ENTERTAINMENT PAGE -->
+        <div id="entertainment-page" style="display: none;">
+            <div class="container">
+                <main class="main-content">
+                    <h1 style="text-align: center; margin: 40px 0; font-size: 36px;">ENTRETENIMIENTO</h1>
+                    <div class="post-list">
+                        <article class="post-item">
+                            <img src="https://images.unsplash.com/photo-1489599112
